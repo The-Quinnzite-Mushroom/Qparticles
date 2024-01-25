@@ -102,7 +102,7 @@ class Particle():
         if Csize and type(Csize) != list:
             Csize = [Csize,Csize]
         if Shape == 0 and Fname != 0:
-            Shape = pygame.image.load(art_folder+Fname +'.png')
+            Shape = pygame.image.load(art_folder+Fname)
         
         self.Colour = Colour
         self.Size = Size
@@ -178,7 +178,7 @@ class Particle():
         self.Timer -=1
         
         #if self.create_particle !=0:
-        return(self.Create_particle) #allows particles to create particles
+        #return(self.Create_particle) #allows particles to create particles
         
     def adjust_pos(self,RelPos):#shows compared to a relative position, showPos = RealPos - RelPos
         self.Pos[0] = self.RealPos[0] - RelPos[0]
@@ -291,14 +291,16 @@ def load_particle(fname="name",folder ="",prename = 0):#loads item
     return particle
 def run_particles(particles):
     #new_particles = []
-    new_particles = []
     for particle in particles:
-        new_particle = particle.run()
-        if new_particle !=0:
-            new_particle[0].inherite(particle,new_particle[1])
-            new_particles.append(copy.deepcopy(new_particle[0]))
-    for new_particle in new_particles:
-        particles.insert(0,new_particle)
+        particle.run()
+    # new_particles = []
+    # for particle in particles:
+    #     new_particle = particle.run()
+    #     if new_particle !=0:
+    #         new_particle[0].inherite(particle,new_particle[1])
+    #         new_particles.append(copy.deepcopy(new_particle[0]))
+    # for new_particle in new_particles:
+    #     particles.insert(0,new_particle)
     return particles
 def show_particles(surf,particles,RelPos=0):
     for particle in particles:
