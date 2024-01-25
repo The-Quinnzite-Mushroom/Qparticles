@@ -1,7 +1,7 @@
-A particle module that can do a lot of things.
+A pthon/pygame particle module that can do a lot of things. Make shapes that move, fade, change colour and other stuff.
 ![red](https://github.com/JAQuinnT/Qparticles/assets/152278657/028f6138-518b-4d31-9d9c-37304deeca76)
 
-**the main class:**
+**The Main Class:**
 
 qparticles.Particle(Shape = "circle",Colour = [0,0,0,255],Size = [10,10],Pos=[0,0],Light = 0,Timer = -1,Cpos=0,Csize =0,Ccolour = 0,A=0,Create_particle= 0,Bounce=0,Tag=0,RealPos=0,Fname=0,Border =0, Cborder = 0, Rotation = 0, Crotation = 0)
 
@@ -49,7 +49,7 @@ Crotation - change in rotation
 
 create_particle and bounce curently are a work in progress
 
-**class functions:**
+**Class Functions:**
 
 Particle.show(surf,RelPos= 0)
 
@@ -67,7 +67,7 @@ Particle.save(name='name',folder='')
 
   saves folder/name as a .json 
 
-**other functions:**
+**Other Functions:**
 
 load_particle(fname="name",folder ="")
 
